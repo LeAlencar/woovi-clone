@@ -1,6 +1,5 @@
 import { Box, Container, Flex, Heading, Image, Text } from "@chakra-ui/react"
 
-
 const FirstSection = () => {
   return (
     <Container
@@ -28,7 +27,7 @@ const FirstSection = () => {
           <Box alignSelf="flex-start">
             <Heading as="h1" margin="0 0 2rem" fontSize="3rem" lineHeight="1.1" color="white" fontWeight="700">Cashback: Recompense seus clientes na hora</Heading>
           </Box>
-          <Box mt="8px" alignSelf="flex-start">
+          <Box mt="8px" alignSelf="flex-start" >
             <Text as="a" color="rgb(3, 214, 157)" fontWeight="bold" textDecoration="underline" href="https://woovi.com/register">Cadastre-se agora ➜</Text>
           </Box>
         </Flex>

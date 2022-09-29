@@ -1,7 +1,7 @@
 import { Box, Container, Flex, Heading, Image, Text } from "@chakra-ui/react"
 
 
-const SecondSection = () => {
+const OmniSection = () => {
   return (
     <Container
       height="500px"
@@ -26,9 +26,10 @@ const SecondSection = () => {
           flexDirection="column"
         >
           <Box alignSelf="flex-start">
-            <Heading as="h1" margin="0 0 2rem" fontSize="3rem" lineHeight="1.1" color="white" fontWeight="700">Simples e rápido, como o Pix.</Heading>
+            <Heading as="h1"  fontSize="3rem" lineHeight="1.1" color="white" fontWeight="700">Na loja, ecommerce, Whatsapp, SMS e muito mais</Heading>
+            <Text color="white">Omnichannel de verdade. É Pix? Dê Cashback e venda mais.</Text>
           </Box>
-          <Box mt="8px" alignSelf="flex-start">
+          <Box mt="20px" alignSelf="flex-start">
             <Text as="a" color="rgb(3, 214, 157)" fontWeight="bold" textDecoration="underline" href="https://woovi.com/register">Cadastre-se agora ➜</Text>
           </Box>
         </Flex>
@@ -37,9 +38,10 @@ const SecondSection = () => {
           justifyContent="center"
           alignItems="flex-end"
           flexDirection="column"
+          flex="1 1 0%"
         >
-          <Box width="400px" height="400px">
-            <Image alt="Pagamentos Woovi" src="https://woovi.com/static/21962e88dd4b260eb35453c9e32817f3/7f639/cashback-flow.png" />
+          <Box position="relative" overflow="hidden" width="550px" height="515px">
+            <Image alt="Pagamentos Woovi" src="https://woovi.com/static/9cbcbbf0cdec95a9d480cf73caf3f0b3/40413/qr-code.png" />
           </Box>
         </Flex>
 
@@ -48,4 +50,4 @@ const SecondSection = () => {
   )
 }
 
-export default SecondSection
+export default OmniSection
