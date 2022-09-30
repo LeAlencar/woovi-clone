@@ -46,7 +46,7 @@ const Header = () => {
         mr="30px"
         ml="30px"
       >
-        <Logo isMobile={isMobile} scrolled={scrolled}/>
+        <Logo isWideVersion={isWideVersion} scrolled={scrolled}/>
         {isWideVersion && (
           <Flex
             align="center"
