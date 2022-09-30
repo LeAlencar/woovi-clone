@@ -40,7 +40,7 @@ const OmniSection = () => {
           flexDirection="column"
           flex="1 1 0%"
         >
-          <Box position="relative" overflow="hidden" width="550px" height="515px">
+          <Box overflow="hidden" width="550px" height="515px">
             <Image alt="Pagamentos Woovi" src="https://woovi.com/static/9cbcbbf0cdec95a9d480cf73caf3f0b3/40413/qr-code.png" />
           </Box>
         </Flex>
