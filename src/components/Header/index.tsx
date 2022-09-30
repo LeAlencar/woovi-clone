@@ -6,11 +6,7 @@ import Logo from "./Logo"
 const Header = () => {
   const [scrolled, setScrolled] = useState<boolean>(false)
   const [isMobile] = useMediaQuery("(max-width: 600px)")
-  const isMobile1 = useBreakpointValue({
-    base: true,
-    md: false,
-    lg: false
-  })
+
   const isWideVersion = useBreakpointValue({
     base: false,
     lg: true
@@ -51,7 +47,7 @@ const Header = () => {
         mr="30px"
         ml="30px"
       >
-        <Logo isMobile={isMobile} scrolled={scrolled}/>
+        <Logo isWideVersion={isWideVersion} scrolled={scrolled}/>
         {isWideVersion && (
           <Flex
             align="center"
