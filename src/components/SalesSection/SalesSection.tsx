@@ -14,7 +14,6 @@ const SalesSection = () => {
           justifyContent="center"
           alignItems="center"
           marginTop="60px"
-          marginLeft="60px"
         >
           <Box width="800px" height="400px">
             <Image alt="Pagamentos Woovi" src="https://woovi.com/static/f7bc61b684f355dcc619b37da2727fa7/56a0c/cashback-sms.png" />

@@ -1,7 +1,11 @@
-import { Box, Container, Flex, Heading, Image, Text } from "@chakra-ui/react"
+import { Box, Container, Flex, Heading, Image, Text, useBreakpointValue } from "@chakra-ui/react"
 
 
 const SecondSection = () => {
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true
+  })
   return (
     <Container
       height="500px"
@@ -33,7 +37,8 @@ const SecondSection = () => {
           </Box>
         </Flex>
 
-        <Flex
+        {isWideVersion && (
+          <Flex
           justifyContent="center"
           alignItems="flex-end"
           flexDirection="column"
@@ -42,6 +47,9 @@ const SecondSection = () => {
             <Image alt="Pagamentos Woovi" src="https://woovi.com/static/21962e88dd4b260eb35453c9e32817f3/7f639/cashback-flow.png" />
           </Box>
         </Flex>
+        )}
+
+        
 
       </Flex>
     </Container>

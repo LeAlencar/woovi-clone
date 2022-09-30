@@ -1,7 +1,11 @@
-import { Box, Container, Flex, Heading, Image, Text } from "@chakra-ui/react"
+import { Box, Container, Flex, Heading, Image, Text, useBreakpointValue } from "@chakra-ui/react"
 
 
 const OmniSection = () => {
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true
+  })
   return (
     <Container
       height="500px"
@@ -33,17 +37,19 @@ const OmniSection = () => {
             <Text as="a" color="rgb(3, 214, 157)" fontWeight="bold" textDecoration="underline" href="https://woovi.com/register">Cadastre-se agora ➜</Text>
           </Box>
         </Flex>
-
-        <Flex
-          justifyContent="center"
-          alignItems="flex-end"
-          flexDirection="column"
-          flex="1 1 0%"
-        >
-          <Box overflow="hidden" width="550px" height="515px">
-            <Image alt="Pagamentos Woovi" src="https://woovi.com/static/9cbcbbf0cdec95a9d480cf73caf3f0b3/40413/qr-code.png" />
-          </Box>
-        </Flex>
+        {isWideVersion && (
+           <Flex
+           justifyContent="center"
+           alignItems="flex-end"
+           flexDirection="column"
+           flex="1 1 0%"
+         >
+           <Box overflow="hidden" width="550px" height="515px">
+             <Image alt="Pagamentos Woovi" src="https://woovi.com/static/9cbcbbf0cdec95a9d480cf73caf3f0b3/40413/qr-code.png" />
+           </Box>
+         </Flex>
+        )}
+       
 
       </Flex>
     </Container>
