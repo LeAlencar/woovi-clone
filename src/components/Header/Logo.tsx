@@ -2,10 +2,10 @@ import { Text } from "@chakra-ui/react";
 
 interface HeaderProps {
   scrolled?: boolean
-  isWideVersion?: boolean
+  isMobile?: boolean
 }
 
-const Logo = ({scrolled = false, isWideVersion}: HeaderProps) => {
+const Logo = ({scrolled = false, isMobile}: HeaderProps) => {
   const color = scrolled ? "#03D69D" : "#FFFFFF" 
   return(
     <Text
@@ -14,7 +14,7 @@ const Logo = ({scrolled = false, isWideVersion}: HeaderProps) => {
       fontSize={["2xl","3xl"]}
       fontWeight="bold"
       display="flex"
-      justifyContent={isWideVersion ? "flex-start" : "center"}
+      justifyContent={isMobile ? "center" : "flex-start"}
       letterSpacing="tight"
       w="64"
     >
