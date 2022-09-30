@@ -1,6 +1,10 @@
-import { Box, Container, Flex, Heading, Image, Text } from "@chakra-ui/react"
+import { Box, Container, Flex, Heading, Image, Text, useBreakpointValue } from "@chakra-ui/react"
 
 const FirstSection = () => {
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true
+  })
   return (
     <Container
       height="630px"
@@ -31,8 +35,8 @@ const FirstSection = () => {
             <Text as="a" color="rgb(3, 214, 157)" fontWeight="bold" textDecoration="underline" href="https://woovi.com/register">Cadastre-se agora ➜</Text>
           </Box>
         </Flex>
-
-        <Flex
+        {isWideVersion && (
+          <Flex
 
           justifyContent="flex-end"
           flexDirection="column"
@@ -42,6 +46,9 @@ const FirstSection = () => {
             </Image>
           </Box>
         </Flex>
+
+        )}
+        
 
       </Flex>
     </Container>
