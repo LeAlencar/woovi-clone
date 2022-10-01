@@ -1,7 +1,8 @@
 import { Box, Container, Flex, Heading, Image, Text, useBreakpointValue } from "@chakra-ui/react"
+import { SectionProps } from "../types/api"
 
 
-const OmniSection = () => {
+const OmniSection = ({section}: SectionProps) => {
   const isWideVersion = useBreakpointValue({
     base: false,
     lg: true
@@ -30,8 +31,8 @@ const OmniSection = () => {
           flexDirection="column"
         >
           <Box alignSelf="flex-start">
-            <Heading as="h1"  fontSize="3rem" lineHeight="1.1" color="white" fontWeight="700">Na loja, ecommerce, Whatsapp, SMS e muito mais</Heading>
-            <Text color="white">Omnichannel de verdade. É Pix? Dê Cashback e venda mais.</Text>
+            <Heading as="h1"  fontSize="3rem" lineHeight="1.1" color="white" fontWeight="700">{section.title}</Heading>
+            <Text color="white">{section.subtitle}</Text>
           </Box>
           <Box mt="20px" alignSelf="flex-start">
             <Text as="a" color="rgb(3, 214, 157)" fontWeight="bold" textDecoration="underline" href="https://woovi.com/register">Cadastre-se agora ➜</Text>
@@ -45,7 +46,7 @@ const OmniSection = () => {
            flex="1 1 0%"
          >
            <Box overflow="hidden" width="550px" height="515px">
-             <Image alt="Pagamentos Woovi" src="https://woovi.com/static/9cbcbbf0cdec95a9d480cf73caf3f0b3/40413/qr-code.png" />
+             <Image alt="Pagamentos Woovi" src={section.image[0].url} />
            </Box>
          </Flex>
         )}

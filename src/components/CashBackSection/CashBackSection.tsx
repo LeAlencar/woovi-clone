@@ -1,12 +1,13 @@
 import { Box, Container, Flex, Heading, SimpleGrid, Text } from "@chakra-ui/react"
+import { SectionProps } from "../../types/api"
 import CashBackHeader from "./CashBackHeader"
 import CashBackItem from "./Item"
 
 
-const CashBackSection = () => {
+const CashBackSection = ({section}: SectionProps) => {
   return (
     <>
-      <CashBackHeader text="Gere mais vendas e fidelize seus clientes com cashback instantâneo" />
+      <CashBackHeader text={section.title} />
       <Flex
         justifyContent="center"
         padding="0px 10px 50px"
