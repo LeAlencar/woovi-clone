@@ -1,13 +1,14 @@
-import { Box, Container, Flex, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react"
+import { Box, Flex, Image } from "@chakra-ui/react"
+import { SectionProps } from "../../types/api"
 import SalesHeader from "./SalesHeader"
 
 
-const SalesSection = () => {
+const SalesSection = ({section}: SectionProps) => {
   return (
     <>
       <SalesHeader
-       title="Você define o cashback!" 
-       subtitle="Suas vendas, suas regras"
+       title={section.title}
+       subtitle={section.subtitle}
       />
       
       <Flex
@@ -16,7 +17,7 @@ const SalesSection = () => {
           marginTop="60px"
         >
           <Box width="800px" height="400px">
-            <Image alt="Pagamentos Woovi" src="https://woovi.com/static/f7bc61b684f355dcc619b37da2727fa7/56a0c/cashback-sms.png" />
+            <Image alt="Pagamentos Woovi" src={section.image[0].url} />
           </Box>
         </Flex>
     </>

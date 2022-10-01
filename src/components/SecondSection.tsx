@@ -1,7 +1,8 @@
 import { Box, Container, Flex, Heading, Image, Text, useBreakpointValue } from "@chakra-ui/react"
+import { SectionProps } from "../types/api"
 
 
-const SecondSection = () => {
+const SecondSection = ({section}: SectionProps) => {
   const isWideVersion = useBreakpointValue({
     base: false,
     lg: true
@@ -30,7 +31,7 @@ const SecondSection = () => {
           flexDirection="column"
         >
           <Box alignSelf="flex-start">
-            <Heading as="h1" margin="0 0 2rem" fontSize="3rem" lineHeight="1.1" color="white" fontWeight="700">Simples e rápido, como o Pix.</Heading>
+            <Heading as="h1" margin="0 0 2rem" fontSize="3rem" lineHeight="1.1" color="white" fontWeight="700">{section.title}</Heading>
           </Box>
           <Box mt="8px" alignSelf="flex-start">
             <Text as="a" color="rgb(3, 214, 157)" fontWeight="bold" textDecoration="underline" href="https://woovi.com/register">Cadastre-se agora ➜</Text>
@@ -44,7 +45,7 @@ const SecondSection = () => {
           flexDirection="column"
         >
           <Box width="400px" height="400px">
-            <Image alt="Pagamentos Woovi" src="https://woovi.com/static/21962e88dd4b260eb35453c9e32817f3/7f639/cashback-flow.png" />
+            <Image alt="Pagamentos Woovi" src={section.image[0].url} />
           </Box>
         </Flex>
         )}

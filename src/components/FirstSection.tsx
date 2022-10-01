@@ -1,10 +1,11 @@
 import { Box, Container, Flex, Heading, Image, Text, useBreakpointValue } from "@chakra-ui/react"
 
-const FirstSection = () => {
+const FirstSection = ({section}: any) => {
   const isWideVersion = useBreakpointValue({
     base: false,
     lg: true
   })
+
   return (
     <Container
       height="630px"
@@ -30,7 +31,7 @@ const FirstSection = () => {
           flexDirection="column"
         >
           <Box alignSelf="flex-start">
-            <Heading as="h1" margin="0 0 2rem" fontSize={["2rem", "2rem", "2rem","3rem"]} lineHeight="1.1" color="white" fontWeight="700">Cashback: Recompense seus clientes na hora</Heading>
+            <Heading as="h1" margin="0 0 2rem" fontSize={["2rem", "2rem", "2rem","3rem"]} lineHeight="1.1" color="white" fontWeight="700">{section.title}</Heading>
           </Box>
           <Box mt="8px" alignSelf="flex-start" >
             <Text as="a" color="rgb(3, 214, 157)" fontWeight="bold" textDecoration="underline" href="https://woovi.com/register">Cadastre-se agora ➜</Text>
@@ -43,7 +44,7 @@ const FirstSection = () => {
 
         >
           <Box display="flex" justifyContent={isWideVersion ? "flex-end" : "center"}>
-            <Image width={["15rem", "15rem","25rem","35rem"]} height={["15rem", "15rem","25rem","35rem"]} alt="Man cashback" src="https://woovi.com/static/f5c57b739d20eedfc68ee0abf94b892d/2f966/man-cashback.png">
+            <Image width={["15rem", "15rem","25rem","35rem"]} height={["15rem", "15rem","25rem","35rem"]} alt="Man cashback" src={section.image[0].url}>
             </Image>
           </Box>
         </Flex>
@@ -55,5 +56,6 @@ const FirstSection = () => {
     </Container>
   )
 }
+
 
 export default FirstSection
