@@ -17,7 +17,7 @@ const SalesSection = ({section}: SectionProps) => {
           marginTop="60px"
         >
           <Box width="800px" height="400px">
-            <Image alt="Pagamentos Woovi" src={section.image[0].url} />
+            <Image alt="Pagamentos Woovi" src={`http://localhost:1337${section.Image.data[0].attributes.url}`} />
           </Box>
         </Flex>
     </>

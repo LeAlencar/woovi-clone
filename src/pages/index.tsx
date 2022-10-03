@@ -7,10 +7,11 @@ import OmniSection from '../components/OmniSection'
 import SalesSection from '../components/SalesSection/SalesSection'
 import SecondSection from '../components/SecondSection'
 import GET_LANDING_PAGE from '../graphql/queries/getLandingPage'
-import hygraphClient from '../graphql/client'
 import { SectionsProps } from '../types/api'
+import strapiClient from '../graphql/client'
 
 const Home = ({sections}: SectionsProps) => {
+  console.log(sections[0])
   return (
     <>
       <Header />
@@ -25,11 +26,12 @@ const Home = ({sections}: SectionsProps) => {
 }
 
 export const getStaticProps:GetStaticProps = async() => {
-  const { page } = await hygraphClient.request(GET_LANDING_PAGE);
+  const { pages } = await strapiClient.request(GET_LANDING_PAGE);
+  const response = pages.data[0].attributes.pageSection
 
   return {
     props: {
-      ...page,
+      sections: response,
     },
     revalidate: 60 * 24
   };

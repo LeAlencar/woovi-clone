@@ -46,7 +46,7 @@ const OmniSection = ({section}: SectionProps) => {
            flex="1 1 0%"
          >
            <Box overflow="hidden" width="550px" height="515px">
-             <Image alt="Pagamentos Woovi" src={section.image[0].url} />
+             <Image alt="Pagamentos Woovi" src={`http://localhost:1337${section.Image.data[0].attributes.url}`} />
            </Box>
          </Flex>
         )}

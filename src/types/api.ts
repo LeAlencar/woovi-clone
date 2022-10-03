@@ -1,11 +1,16 @@
+export interface ImageData {
+  attributes: {
+    url: string
+  }
+}
 export interface Image {
-  url: string
+  data: ImageData[]
 }
 
 export interface Section {
   title: string
   subtitle: string
-  image: Image[]
+  Image: Image[]
 }
 
 export interface SectionsProps {

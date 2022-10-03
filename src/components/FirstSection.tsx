@@ -44,7 +44,7 @@ const FirstSection = ({section}: any) => {
 
         >
           <Box display="flex" justifyContent={isWideVersion ? "flex-end" : "center"}>
-            <Image width={["15rem", "15rem","25rem","35rem"]} height={["15rem", "15rem","25rem","35rem"]} alt="Man cashback" src={section.image[0].url}>
+            <Image width={["15rem", "15rem","25rem","35rem"]} height={["15rem", "15rem","25rem","35rem"]} alt="Man cashback" src={`http://localhost:1337${section.Image.data[0].attributes.url}`}>
             </Image>
           </Box>
         </Flex>
