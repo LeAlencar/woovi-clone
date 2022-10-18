@@ -1,4 +1,4 @@
-import type { GetStaticProps, NextPage } from 'next'
+import type { GetServerSideProps, GetStaticProps, NextPage } from 'next'
 import CashBackSection from '../components/CashBackSection/CashBackSection'
 import FirstSection from '../components/FirstSection'
 import Footer from '../components/Footer/Footer'
@@ -24,14 +24,14 @@ const Home = ({sections}: SectionsProps) => {
   )
 }
 
-export const getStaticProps:GetStaticProps = async() => {
+export const getServerSideProps:GetServerSideProps = async() => {
   const { page } = await hygraphClient.request(GET_LANDING_PAGE);
-
+  console.log(page)
   return {
     props: {
       ...page,
     },
-    revalidate: 60 * 24
+    
   };
 }
 
