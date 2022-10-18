@@ -1,4 +1,5 @@
-import { Box, Flex, Image } from "@chakra-ui/react"
+import { Box, Flex } from "@chakra-ui/react"
+import Image from "next/future/image"
 import { SectionProps } from "../../types/api"
 import SalesHeader from "./SalesHeader"
 
@@ -16,8 +17,8 @@ const SalesSection = ({section}: SectionProps) => {
           alignItems="center"
           marginTop="60px"
         >
-          <Box width="800px" height="400px">
-            <Image alt="Pagamentos Woovi" src={section.image[0].url} />
+          <Box height="400px">
+            <Image width="700" height="700" alt="Pagamentos Woovi" src={section.image[0].url} />
           </Box>
         </Flex>
     </>

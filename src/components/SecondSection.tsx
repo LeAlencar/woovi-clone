@@ -1,4 +1,5 @@
-import { Box, Container, Flex, Heading, Image, Text, useBreakpointValue } from "@chakra-ui/react"
+import { Box, Container, Flex, Heading, Text, useBreakpointValue } from "@chakra-ui/react"
+import Image from "next/future/image"
 import { SectionProps } from "../types/api"
 
 
@@ -45,7 +46,7 @@ const SecondSection = ({section}: SectionProps) => {
           flexDirection="column"
         >
           <Box width="400px" height="400px">
-            <Image alt="Pagamentos Woovi" src={section.image[0].url} />
+            <Image width="500" height="500" alt="Pagamentos Woovi" src={section.image[0].url} />
           </Box>
         </Flex>
         )}

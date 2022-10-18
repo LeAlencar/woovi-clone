@@ -1,4 +1,5 @@
-import { Box, Container, Flex, Heading, Image, Text, useBreakpointValue } from "@chakra-ui/react"
+import { Box, Container, Flex, Heading, Text, useBreakpointValue } from "@chakra-ui/react"
+import Image from "next/future/image"
 import { SectionProps } from "../types/api"
 
 
@@ -46,7 +47,7 @@ const OmniSection = ({section}: SectionProps) => {
            flex="1 1 0%"
          >
            <Box overflow="hidden" width="550px" height="515px">
-             <Image alt="Pagamentos Woovi" src={section.image[0].url} />
+             <Image width="500" height="500" alt="Pagamentos Woovi" src={section.image[0].url} />
            </Box>
          </Flex>
         )}

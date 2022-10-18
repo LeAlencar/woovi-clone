@@ -1,4 +1,5 @@
-import { Box, Container, Flex, Heading, Image, Text, useBreakpointValue } from "@chakra-ui/react"
+import { Box, Container, Flex, Heading, Text, useBreakpointValue } from "@chakra-ui/react"
+import Image from "next/future/image"
 
 const FirstSection = ({section}: any) => {
   const isWideVersion = useBreakpointValue({
@@ -44,7 +45,7 @@ const FirstSection = ({section}: any) => {
 
         >
           <Box display="flex" justifyContent={isWideVersion ? "flex-end" : "center"}>
-            <Image width={["15rem", "15rem","25rem","35rem"]} height={["15rem", "15rem","25rem","35rem"]} alt="Man cashback" src={section.image[0].url}>
+            <Image width="500" height="500" alt="Man cashback" src={section.image[0].url}>
             </Image>
           </Box>
         </Flex>
