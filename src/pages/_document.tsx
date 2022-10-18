@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import DeferNextScript from '../helpers/NextScript'
 
 export default function Document() {
   return (
@@ -10,7 +11,7 @@ export default function Document() {
       </Head>
       <body>
         <Main />
-        <NextScript />
+        <DeferNextScript />
       </body>
     </Html>
   )
