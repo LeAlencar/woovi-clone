@@ -45,7 +45,7 @@ const FirstSection = ({section}: any) => {
 
         >
           <Box display="flex" justifyContent={isWideVersion ? "flex-end" : "center"}>
-            <Image width="500" height="500" alt="Man cashback" src={section.image[0].url}>
+            <Image priority width="500" height="500" alt="Man cashback" src={section.image[0].url}>
             </Image>
           </Box>
         </Flex>
